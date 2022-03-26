@@ -26,5 +26,6 @@ sleep 3
 docker run --rm \
   --name coffee-demo \
   --network dkrnet \
+  -e SPRING_DATASOURCE_URL=jdbc:postgresql://coffee-db:5432/postgres \
   -p 8080:8080 \
   coffee-demo

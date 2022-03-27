@@ -13,3 +13,5 @@ release.properties
 *.jar
 
 *.tmp
+
+allure-results/

@@ -1,5 +1,6 @@
 package com.sebastian_daschner.coffee.frontend;
 
+import com.codeborne.selenide.Configuration;
 import com.sebastian_daschner.coffee.frontend.views.IndexView;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class CoffeeShopUI {
 
     public void init() {
+        Configuration.timeout = 2000;
         open(uriBuilder().path("index.html").build().toString());
     }
 

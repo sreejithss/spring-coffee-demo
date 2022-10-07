@@ -18,7 +18,7 @@ public class IndexUiIT {
     @AllureId("52")
     void check_headline() {
         IndexView index = coffeeShop.index();
-        index.assertPageHeader("Welcome!");
+        index.assertPageHeader("Welcome");
     }
 
 }

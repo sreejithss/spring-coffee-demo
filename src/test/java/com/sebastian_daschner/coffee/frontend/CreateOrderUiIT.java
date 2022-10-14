@@ -2,7 +2,6 @@ package com.sebastian_daschner.coffee.frontend;
 
 import com.sebastian_daschner.coffee.frontend.views.IndexView;
 import com.sebastian_daschner.coffee.frontend.views.OrderView;
-import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +19,6 @@ public class CreateOrderUiIT {
     }
 
     @Test
-    @AllureId("53")
     void create_coffee_order() {
         IndexView index = coffeeShop.index();
         int numberOrders = index.getListedOrders().size();
@@ -37,7 +35,6 @@ public class CreateOrderUiIT {
     }
 
     @Test
-    @AllureId("54")
     void create_coffee_order_keyboard_select() {
         IndexView index = coffeeShop.index();
         int numberOrders = index.getListedOrders().size();

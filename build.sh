@@ -2,6 +2,6 @@
 set -euo pipefail
 cd ${0%/*}
 
-mvn clean install
+mvn clean package
 
 docker build -t coffee-demo .

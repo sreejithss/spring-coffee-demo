@@ -20,7 +20,7 @@ public class IndexController {
         this.coffeeShop = coffeeShop;
     }
 
-    @GetMapping("index.html")
+    @GetMapping({"/", "index.html"})
     public String index(Model model) {
         List<Order> orders = coffeeShop.getOrders();
         model.addAttribute("orders", orders);

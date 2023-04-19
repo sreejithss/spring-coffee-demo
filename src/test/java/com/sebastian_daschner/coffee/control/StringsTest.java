@@ -1,5 +1,8 @@
 package com.sebastian_daschner.coffee.control;
 
+import com.sebastian_daschner.UnitTest;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -11,7 +14,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 class StringsTest {
 
     @ParameterizedTest
+    @AllureId("57")
     @MethodSource("testData")
+    @UnitTest
+    @Feature("Utils")
     void testCapitalize(String input, String expected) {
 
         String output = Strings.capitalize(input);

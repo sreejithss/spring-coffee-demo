@@ -1,9 +1,12 @@
 package com.sebastian_daschner.coffee.boundary;
 
+import com.sebastian_daschner.UnitTest;
 import com.sebastian_daschner.coffee.control.OrderRepository;
 import com.sebastian_daschner.coffee.control.OriginRepository;
 import com.sebastian_daschner.coffee.entity.Order;
 import com.sebastian_daschner.coffee.entity.Origin;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +24,10 @@ class CoffeeShopTest {
     private OrderRepository orderRepository;
 
     @Test
-    void updateOrderShouldUpdateFields() {
+    @AllureId("58")
+    @UnitTest
+    @Feature("Order coffee")
+    void updateOrderShouldUpdateFieldsRenamedTestCase() {
         Order managedOrder = new Order();
         when(orderRepository.findById(any())).thenReturn(Optional.of(managedOrder));
 

@@ -1,6 +1,9 @@
 package com.sebastian_daschner.coffee.frontend;
 
+import com.sebastian_daschner.UiTest;
 import com.sebastian_daschner.coffee.frontend.views.IndexView;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,9 +17,12 @@ public class IndexUiIT {
     }
 
     @Test
-    void check_headline() {
+    @AllureId("61")
+    @UiTest
+    @Feature("Frontend")
+    void check_headline_message() {
         IndexView index = coffeeShop.index();
-        index.assertPageHeader("Welcome");
+        index.assertPageHeader("Welcome!");
     }
 
 }

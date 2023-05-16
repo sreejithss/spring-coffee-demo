@@ -27,7 +27,7 @@ class CoffeeShopTest {
     @AllureId("58")
     @UnitTest
     @Feature("Order coffee")
-    void updateOrderShouldUpdateFieldsRenamedTestCase() {
+    void updateOrderShouldUpdateFields() {
         Order managedOrder = new Order();
         when(orderRepository.findById(any())).thenReturn(Optional.of(managedOrder));
 

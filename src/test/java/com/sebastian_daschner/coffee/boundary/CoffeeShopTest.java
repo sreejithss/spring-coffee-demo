@@ -7,6 +7,7 @@ import com.sebastian_daschner.coffee.entity.Order;
 import com.sebastian_daschner.coffee.entity.Origin;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -27,6 +28,7 @@ class CoffeeShopTest {
     @AllureId("58")
     @UnitTest
     @Feature("Order coffee")
+    @Owner("johndoe")
     void updateOrderShouldUpdateFields() {
         Order managedOrder = new Order();
         when(orderRepository.findById(any())).thenReturn(Optional.of(managedOrder));

@@ -3,6 +3,7 @@ package com.sebastian_daschner.coffee.control;
 import com.sebastian_daschner.UnitTest;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -18,6 +19,7 @@ class StringsTest {
     @MethodSource("testData")
     @UnitTest
     @Feature("Utils")
+    @Owner("johndoe")
     void testCapitalize(String input, String expected) {
 
         String output = Strings.capitalize(input);

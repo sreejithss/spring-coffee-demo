@@ -7,7 +7,7 @@ import com.sebastian_daschner.coffee.entity.Order;
 import com.sebastian_daschner.coffee.entity.Origin;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
